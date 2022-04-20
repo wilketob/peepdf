@@ -1,3 +1,0 @@
-FROM archlinux:base-devel
-ENV LANG=en_US.UTF-8
-CMD ["/usr/bin/bash"]
