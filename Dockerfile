@@ -1,9 +1,8 @@
-FROM archlinux:base-devel
+FROM ubuntu:latest
 ENV LANG=en_US.UTF-8
-RUN pacman -Sy python2 vim wget curl git unzip --noconfirm
+RUN apt update && apt install vim wget curl git unzip python2 -y
 
 WORKDIR /tmp
-
 RUN curl https://bootstrap.pypa.io/pip/2.7/get-pip.py --output get-pip.py
 RUN python2 get-pip.py
 
